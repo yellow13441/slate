@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: EMMS API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
@@ -20,18 +20,58 @@ code_clipboard: true
 
 meta:
   - name: description
-    content: Documentation for the Kittn API
+    content: Documentation for the EMMS API
 ---
 
-# Introduction
+# 简介
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+本页面定义EMMS（Emotion Monitoring Management System，情绪监控管理系统）的API接口。
 
-We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+[emotion-monitoring-management-system - DevCloud - 代码托管](https://devcloud.cn-east-3.huaweicloud.com/codehub/project/303e51cc2c934c73ac10f33dcceb797a/codehub/7377585/home?ref=master)
 
-This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to edit it and use it as a base for your own API's documentation.
+# 用户登录
 
-# Authentication
+## 账号密码登录
+
+> To authorize, use this code:
+
+```ruby
+require 'kittn'
+
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+```
+
+```python
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+```
+
+```shell
+# With shell, you can just pass the correct header with each request
+curl "api_endpoint_here" \
+  -H "Authorization: meowmeowmeow"
+```
+
+```javascript
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
+```
+
+> Make sure to replace `meowmeowmeow` with your API key.
+
+Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+
+Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+
+`Authorization: meowmeowmeow`
+
+<aside class="notice">
+You must replace <code>meowmeowmeow</code> with your personal API key.
+</aside>
+
+## 手机验证码登录
 
 > To authorize, use this code:
 
