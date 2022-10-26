@@ -1,5 +1,5 @@
 ruby '>= 2.6'
-source 'https://rubygems.org'
+source 'https://mirrors.aliyun.com/rubygems/'
 
 # Middleman
 gem 'middleman', '~> 4.4'
